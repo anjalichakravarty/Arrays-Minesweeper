@@ -18,6 +18,7 @@ namespace UI {
         void initialize();
         sf::Vector2f getLogoPosition();
         void drawLogo();
+        
 
     public:
         SplashScreenManager(sf::RenderWindow* window);

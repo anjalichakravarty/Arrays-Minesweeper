@@ -2,10 +2,12 @@
 #include "../../header/GameWindow/GameWindowManager.h"
 #include "../../header/Event/EventPollingManager.h"
 #include "../../header/UI/SplashScreen/SplashScreenManager.h"
+#include "../../header/GameLoop/Gameplay/GameplayManager.h"
 
 using namespace GameWindow;
 using namespace Event;
 using namespace UI;
+using namespace Gameplay;
 
 enum class GameState
 {
@@ -22,6 +24,7 @@ private:
 
     sf::RenderWindow* game_window;
     SplashScreenManager* splash_screen_manager;
+    GameplayManager* gameplayManager;
 
     static GameState current_state;
 

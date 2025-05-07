@@ -45,4 +45,5 @@ namespace UI
             GameLoop::setGameState(GameState::GAMEPLAY);
         }
     }
+
 }
