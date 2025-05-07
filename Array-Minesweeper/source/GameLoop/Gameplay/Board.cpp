@@ -12,6 +12,12 @@ namespace Gameplay {
 	void Board::initialize()
 	{
 		initializeBoardImage();
+		createBoard();
+	}
+
+	void Board::createBoard()
+	{
+		cell = new Cell(83, 83, Vector2i(0, 0));
 	}
 
 	void Board::initializeBoardImage()
@@ -31,5 +37,6 @@ namespace Gameplay {
 	void Board::render(RenderWindow& window)
 	{
 		window.draw(boardSprite);
+		cell->render(window);
 	}
 }
