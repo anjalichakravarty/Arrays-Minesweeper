@@ -26,6 +26,7 @@ namespace UIElements {
 	public:
 
 		Button(const string& texture_path, const Vector2f& position, float width, float height);
+		void setTextureRect(const IntRect& rect);
 
 		void render(RenderWindow& window) const;
 	};
