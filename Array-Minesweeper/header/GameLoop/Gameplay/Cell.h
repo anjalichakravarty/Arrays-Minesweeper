@@ -42,6 +42,11 @@ namespace Gameplay
 		const int slice_count = 12;
 		const string cell_texture_path = "assets/textures/cells.jpeg";
 
+		const float cell_top_offset = 274.0f;
+		const float cell_left_offset = 583.0f;
+
+		Vector2f getCellScreenPosition() const;
+
 		Button* cell_button;
 
 		void initialize(float width, float height, Vector2i position);

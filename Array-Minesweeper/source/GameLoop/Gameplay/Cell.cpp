@@ -10,8 +10,15 @@ namespace Gameplay
 	void Cell::initialize(float width, float height, Vector2i position)
 	{
 		this->position = position;
-		Vector2f float_position(static_cast<float>(position.x), static_cast<float>(position.y)); //convert int to float
-		cell_button = new Button(cell_texture_path, float_position, width * slice_count, height);
+		Vector2f cellScreenPosition = getCellScreenPosition();
+		cell_button = new Button(cell_texture_path, cellScreenPosition, width * slice_count, height);
+	}
+
+	Vector2f Cell::getCellScreenPosition() const
+	{
+		float xScreenPosition = cell_left_offset;
+		float yScreenPosition = cell_top_offset;
+		return Vector2f(xScreenPosition, yScreenPosition);
 	}
 
 	CellState Cell::getCellState() const
