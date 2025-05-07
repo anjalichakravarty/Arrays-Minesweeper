@@ -17,9 +17,19 @@ namespace Gameplay {
 		const float boardHeight = 1080.0f;
 		const float boardPosition = 530.0f;
 
+		//Board Constants
+		static const int numberOfRows = 9;
+		static const int numberOfColumns = 9;
+
+		const float horizontalCellPadding = 115.f;
+		const float verticalCellPadding = 329.f;
+
 		const string boardTexturePath = "assets/textures/board.png";
 		Texture boardTexture;
 		Sprite boardSprite;
+
+		float getCellWidthInBoard() const;
+		float getCellHeightInBoard() const;
 
 		void initializeBoardImage();
 		void initialize();
